@@ -12,17 +12,17 @@ After building an image, the container can be ran in detached mode (get back to 
 > docker run -d -p 4000:80 friendlyhello
 
 To push this up to the local registry (similar to committing and tag the commit): 
-''' docker tag friendlyhello localhost:5000/friendlyhello
- docker push localhost:5000/friendlyhello'''
+> docker tag friendlyhello localhost:5000/friendlyhello  
+> docker push localhost:5000/friendlyhello  
 
 Note: pushing may take a couple of minutes with the size of the docker registry.
 
 From there it's possible to stop the running container and remove the images
- docker container ls 
- docker container stop ${CONTAINER ID} 
- docker image remove friendlyhello
- docker image remove localhost:5000/friendlyhello'''
+> docker container ls  
+> docker container stop ${CONTAINER ID}   
+> docker image remove friendlyhello  
+> docker image remove localhost:5000/friendlyhello  
 
 It's easy to pull the image back now and use it again or just b y running it the image will be pulled
-''' docker pull localhost:5000/friendlyhello
- docker run -d -p 4000:80 localhost:5000/friendlyhello'''
+> docker pull localhost:5000/friendlyhello  
+> docker run -d -p 4000:80 localhost:5000/friendlyhello   
