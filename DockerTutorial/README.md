@@ -26,3 +26,11 @@ From there it's possible to stop the running container and remove the images
 It's easy to pull the image back now and use it again or just b y running it the image will be pulled
 > docker pull localhost:5000/friendlyhello  
 > docker run -d -p 4000:80 localhost:5000/friendlyhello   
+
+#Swarm
+To run this with high availability as a swarm:
+> docker stack deploy -c docker-compose.yml friendlyhelloswarm
+
+This will bring up container with a visualizer and redis cache. 
+You should now be able to reach the container on localhost (port 80 which is default) and you can see a visual representation of the containers on localhost:8080
+
